@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Site</title>
 </head>
 <body>
-    
+    <h1 id="teste">olá</h1>
+    <button id="1">a</button>
+    <button id="2">b</button>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <script>
+        const elemento = document.getElementById("teste");
+
+        elemento.innerText = "pai?";
+
+        //elemento.style.color = "green";
+
+        elemento.classList.add("test");
+
+        const btna = document.getElementById("1");
+        const btnb = document.getElementById("2");
+        const input1 = document.getElementById("input1");
+        const input2 = document.getElementById("input2");
+
+        btna.onclick = function() {
+            //elemento.style.color = "orange";
+            const valor1 = parseInt(input1.value, 10);
+            const valor2 = parseInt(input2.value, 10);
+            const soma = valor1 + valor2;
+
+            elemento.innerText = soma;
+        }
+
+        btnb.onclick = function() {
+            //elemento.innerText = "te amo Jesus!";
+            //elemento.style.color = "black";
+        }
+    </script>
 </body>
 </html>
